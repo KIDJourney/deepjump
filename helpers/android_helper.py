@@ -16,5 +16,6 @@ def get_screen_shoot(image_name='tmp.png', download_path="./images/"):
 
 
 def click_screen(x, y, t):
+    t = int(t * 1000)
     x, y, t = str(x), str(y), str(t)
-    call(['adb', 'swipe', x, y, x, y, t])
+    call(['adb', 'shell', 'input', 'swipe', x, y, x, y, t])
