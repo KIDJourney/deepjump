@@ -1,4 +1,4 @@
-from android_utils import get_screen_shoot
+from helpers import android_helper
 
 
 class JumpGame:
@@ -6,7 +6,7 @@ class JumpGame:
         self.status = []
 
     def get_status(self):
-        self.status = get_screen_shoot()
+        self.status = android_helper.get_screen_shoot()
 
     def action(self):
         pass
